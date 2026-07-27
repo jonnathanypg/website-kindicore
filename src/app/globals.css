@@ -687,10 +687,11 @@ ol {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 9999;
+    z-index: 1;
     pointer-events: none;
-    opacity: 0.6;
+    opacity: 0.45;
 }
+
 
 .footer {
     background: var(--dark-bg-secondary);
