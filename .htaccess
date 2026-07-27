@@ -1,27 +1,9 @@
 RewriteEngine On
 
-# Set default page
-DirectoryIndex index_kindicore.html
-
 # Ensure HTTPS
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Remove .html extension
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html [L]
-
-# Custom rewrites for specific versions
-RewriteRule ^version-uno/?$ index2.html [L]
-RewriteRule ^version-dos/?$ index3.html [L]
-RewriteRule ^version-tres/?$ index4.html [L]
-RewriteRule ^version-cuatro/?$ index5.html [L]
-
-# Optional: Redirect old .html requests to new format (if desired)
-# RewriteCond %{THE_REQUEST} \s/index2\.html\s [NC]
-# RewriteRule ^index2\.html$ /version-uno [R=301,L]
-# (Repeat for others if strict redirection is needed)
 
 # ============================================================
 # PERFORMANCE OPTIMIZATIONS
