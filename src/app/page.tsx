@@ -7,9 +7,9 @@ export default function Home() {
   return (
     <>
       {/* ============================================================
-         HERO SECTION (DARK)
+         FRANJA 1: HERO SECTION (DARK GLASS & HIGH-CONVERSION ANCHORS)
          ============================================================ */}
-      <section id="inicio" className="section section-dark hero">
+      <section id="inicio" className="section section-dark hero" style={{ position: 'relative', overflow: 'hidden' }}>
         {/* Floating Background Shapes */}
         <div className="floating-shapes-container">
           <div
@@ -21,8 +21,8 @@ export default function Home() {
             style={{
               bottom: '10%',
               right: '-5%',
-              width: '200px',
-              height: '200px',
+              width: '240px',
+              height: '240px',
               animationDuration: '18s',
               animationDelay: '-5s',
             }}
@@ -32,9 +32,9 @@ export default function Home() {
             style={{
               bottom: '-10%',
               left: '30%',
-              width: '150px',
-              height: '150px',
-              opacity: 0.2,
+              width: '180px',
+              height: '180px',
+              opacity: 0.25,
               animationDuration: '30s',
             }}
           />
@@ -42,31 +42,30 @@ export default function Home() {
 
         <div className="container hero-content">
           <br />
-          <br />
-          <div className="hero-badge">
-            <div className="badge-dot" />
-            <span>Producción Estable v1.1</span>
+          <div className="hero-badge" style={{ background: 'rgba(99, 102, 241, 0.15)', borderColor: 'rgba(99, 102, 241, 0.3)' }}>
+            <div className="badge-dot" style={{ background: '#10b981', boxShadow: '0 0 10px #10b981' }} />
+            <span>✨ Plataforma N° 1 en Gestión Inteligente de Cuidado Infantil</span>
           </div>
 
-          <h1 className="hero-title">
-            Transformando el Cuidado Infantil con{' '}
-            <span className="gradient-text">Inteligencia Artificial</span>
+          <h1 className="hero-title" style={{ marginTop: '1.2rem', lineHeight: 1.15 }}>
+            La Primera Fuerza Laboral Virtual de IA que{' '}
+            <span className="gradient-text">Protege y Cuida</span> a Cada Niño
           </h1>
 
-          <p className="hero-subtitle">
-            Una fuerza laboral virtual de 360° para Centros de Desarrollo Infantil. Elimina la burocracia y enfócate en el bienestar de los niños.
+          <p className="hero-subtitle" style={{ fontSize: '1.25rem', maxWidth: '780px', margin: '1.5rem auto 2.5rem auto', color: 'var(--text-white-90)' }}>
+            Elimina el 80% del papeleo manual en tu Centro de Cuidado Infantil. Automatiza la nutrición OMS, la asistencia biométrica y mantén a los padres tranquilos con alertas en tiempo real.
           </p>
 
-          <div className="hero-cta-group">
-            <a href="#contacto" className="btn-primary">
-              Solicitar Demo
+          <div className="hero-cta-group" style={{ display: 'flex', gap: '1.25rem', justifyContent: 'center', alignItems: 'center' }}>
+            <a href="#contacto" className="btn-primary" style={{ padding: '1rem 2.2rem', fontSize: '1.1rem', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.6rem' }}>
+              Comenzar Mi Transformación
               <svg
                 width="20"
                 height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2"
+                strokeWidth="2.5"
               >
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
@@ -76,15 +75,30 @@ export default function Home() {
               rel="noopener noreferrer"
               href="https://app.kindicoreai.sbs/"
               className="btn-glass"
+              style={{ padding: '1rem 2rem', fontSize: '1.1rem', fontWeight: 500 }}
             >
-              Ir a la Aplicación
+              🚀 Probar Demo Interactiva
             </a>
           </div>
-          <br />
-          <br />
+
+          {/* Micro-Social Proof Bar */}
+          <div style={{ marginTop: '3rem', display: 'flex', gap: '2rem', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap', opacity: 0.85 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+              <span style={{ color: '#f59e0b', fontSize: '1.2rem' }}>★★★★★</span>
+              <span><strong>4.9/5</strong> de valoración ejecutiva</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span><strong>+100%</strong> trazabilidad nutricional</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6366f1" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span><strong>-5.5 horas/sem</strong> ahorradas por docente</span>
+            </div>
+          </div>
         </div>
 
-        {/* Wave Bottom - Flipped for "Flow Down" effect */}
+        {/* Wave Bottom Divider */}
         <div className="wave-divider bottom" style={{ transform: 'scaleY(-1)', bottom: '-2px' }}>
           <svg
             data-name="Layer 1"
@@ -98,24 +112,19 @@ export default function Home() {
             />
           </svg>
         </div>
-        <b>
-          <br />
-          <br />
-          <br />
-        </b>
       </section>
 
       {/* ============================================================
-         VISION SECTION (LIGHT)
+         FRANJA 2: VISIÓN & SOLUCIÓN A LA FRICCIÓN (LIGHT SECTION)
          ============================================================ */}
       <section id="vision" className="section section-light">
         <div className="container">
           <div className="section-header animate-on-scroll animated" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: 700, color: 'var(--dark-bg)', marginBottom: '1rem' }}>
-              Visión <span className="gradient-text">Ejecutiva</span>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--dark-bg)', marginBottom: '1rem' }}>
+              De la Fricción Manual al <span className="gradient-text">Superpoder Digital</span>
             </h2>
-            <p style={{ color: 'var(--light-text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-              Nuestra misión es resolver la fragmentación operativa y la falta de datos en tiempo real que sufren las instituciones de cuidado infantil.
+            <p style={{ color: 'var(--light-text-secondary)', maxWidth: '680px', margin: '0 auto', fontSize: '1.1rem' }}>
+              Reemplaza carpetas físicas y hojas de cálculo dispersas por una plataforma unificada que anticipa problemas y automatiza decisiones clave.
             </p>
           </div>
 
@@ -136,14 +145,10 @@ export default function Home() {
             />
           </svg>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
       </section>
 
       {/* ============================================================
-         FUNCTIONALITY SECTION (DARK)
+         FRANJA 3: CHILD-CENTRIC CORE & RED NEURONAL (DARK INTERACTIVE)
          ============================================================ */}
       <section id="funcionalidad" className="section section-dark">
         <div className="floating-shapes-container">
@@ -154,12 +159,12 @@ export default function Home() {
         </div>
 
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '4rem' }} className="animate-on-scroll animated">
-            <h2 style={{ fontSize: '2.5rem', fontWeight: 700 }}>
-              Objetivos Sociales y <span className="gradient-text">Funcionalidad</span>
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }} className="animate-on-scroll animated">
+            <h2 style={{ fontSize: '2.5rem', fontWeight: 800 }}>
+              Ecosistema Integrado de <span className="gradient-text">Protección Infantil</span>
             </h2>
-            <p style={{ color: 'var(--text-muted)', maxWidth: '600px', margin: '1rem auto' }}>
-              Gestión del Cuidado Infantil (Child-Centric Core): El sistema pone al niño en el centro de todas las operaciones.
+            <p style={{ color: 'var(--text-muted)', maxWidth: '650px', margin: '1rem auto', fontSize: '1.1rem' }}>
+              Nuestra Red Neuronal conecta 5 pilares operativos en tiempo real. Pasa el cursor por cada nodo para ver su superpoder de automatización.
             </p>
           </div>
 
@@ -180,14 +185,10 @@ export default function Home() {
             />
           </svg>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
       </section>
 
       {/* ============================================================
-         ARCHITECTURE & ROADMAP (LIGHT)
+         FRANJA 4: ARQUITECTURA & MEDIDA DEL IMPACTO (LIGHT SECTION)
          ============================================================ */}
       <section id="arquitectura" className="section section-light">
         <div className="container">
@@ -208,23 +209,23 @@ export default function Home() {
             />
           </svg>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
       </section>
 
       {/* ============================================================
-         CONTACT SECTION (DARK)
+         FRANJA 5: CIERRE DIRECTO A LA CONVERSIÓN (DARK GLASS CONTACT)
          ============================================================ */}
       <section id="contacto" className="section section-dark" style={{ position: 'relative' }}>
-        <div className="container" style={{ paddingTop: '4rem' }}>
+        <div className="container" style={{ paddingTop: '2rem' }}>
           <div
-            style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 4rem auto' }}
+            style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 3.5rem auto' }}
             className="animate-on-scroll animated"
           >
-            <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 3.5rem)', fontWeight: 800, marginBottom: '1rem' }}>
-              Únete a la{' '}
+            <div className="hero-badge" style={{ display: 'inline-flex', marginBottom: '1rem', background: 'rgba(244, 63, 94, 0.15)', borderColor: 'rgba(244, 63, 94, 0.3)' }}>
+              <span>🚀 Garantía de Implementación Plug & Play en 24 Horas</span>
+            </div>
+
+            <h2 style={{ fontSize: 'clamp(2.3rem, 5vw, 3.2rem)', fontWeight: 800, marginBottom: '1rem' }}>
+              ¿Listo para Reinterpretar la{' '}
               <span
                 style={{
                   background:
@@ -234,11 +235,11 @@ export default function Home() {
                   WebkitTextFillColor: 'transparent',
                 }}
               >
-                Revolución
+                Excelencia en tu Centro?
               </span>
             </h2>
-            <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)' }}>
-              Solicita acceso anticipado y transforma tu Centro de Cuidado Infantil.
+            <p style={{ fontSize: '1.15rem', color: 'var(--text-muted)' }}>
+              Solicita un análisis sin costo para tu institución. Recibe una demo personalizada y descubre cómo ahorrar cientos de horas administrativas desde la primera semana.
             </p>
           </div>
 
