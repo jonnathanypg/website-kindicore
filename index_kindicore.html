@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KindiCore AI - Infraestructura Digital Inteligente</title>
+    <title>KindiCore AI — Gestión Inteligente para Centros de Cuidado Infantil</title>
     <meta name="description"
-        content="KindiCore AI - Infraestructura digital inteligente para transformar Centros de Desarrollo Infantil. Gestión de salud, nutrición y asistencia con IA.">
+        content="KindiCore AI: elimina el papeleo manual, automatiza la nutrición OMS, controla la asistencia y mantén a las familias tranquilas. La plataforma de IA N°1 para guarderías, CDI y CMCI en Ecuador y Latinoamérica.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,18 +17,10 @@
     <!-- Styles -->
     <link rel="stylesheet" href="style_kindicore.css">
 
-    <!-- Inline Wave SVGs -->
+    <!-- Wave SVG fills -->
     <style>
-        .shape-fill {
-            fill: var(--light-bg);
-        }
-
-        /* Match light section bg */
-        .shape-fill-dark {
-            fill: var(--dark-bg);
-        }
-
-        /* Match dark section bg */
+        .shape-fill { fill: var(--light-bg); }
+        .shape-fill-dark { fill: var(--dark-bg); }
     </style>
     <script src="script_kindicore.js" defer></script>
 </head>
@@ -40,13 +32,11 @@
     <header class="navbar" id="navbar">
         <nav class="container nav-container">
             <a href="#inicio" class="logo" aria-label="Inicio">
-                <!-- Brain/Neural Network Logo -->
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#logoGradient)"
-                    stroke-width="1.5">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="url(#logoGradient)" stroke-width="1.5">
                     <defs>
                         <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#6366f1" /> <!-- brand-primary -->
-                            <stop offset="100%" stop-color="#f43f5e" /> <!-- brand-secondary -->
+                            <stop offset="0%" stop-color="#6366f1" />
+                            <stop offset="100%" stop-color="#f43f5e" />
                         </linearGradient>
                     </defs>
                     <circle cx="12" cy="12" r="3" />
@@ -66,107 +56,111 @@
                 <span class="logo-text">KindiCore <span class="gradient-text">AI</span></span>
             </a>
 
-
             <div class="nav-links">
                 <a href="#vision" class="nav-link">Visión</a>
-                <a href="#funcionalidad" class="nav-link">Funcionalidad</a>
-                <a href="#arquitectura" class="nav-link">Tecnología</a>
-                <a href="#arquitectura" class="nav-link">Impacto</a>
+                <a href="#funcionalidad" class="nav-link">Pilares</a>
+                <a href="#impacto" class="nav-link">Beneficios</a>
                 <a href="#contacto" class="nav-cta">Solicitar Demo</a>
             </div>
 
             <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menú">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </nav>
 
         <div class="mobile-menu" id="mobileMenu">
             <a href="#vision" class="mobile-link">Visión</a>
-            <a href="#funcionalidad" class="mobile-link">Funcionalidad</a>
-            <a href="#arquitectura" class="mobile-link">Tecnología</a>
-            <a href="#arquitectura" class="mobile-link">Impacto</a>
+            <a href="#funcionalidad" class="mobile-link">Pilares</a>
+            <a href="#impacto" class="mobile-link">Beneficios</a>
             <a href="#contacto" class="nav-cta">Solicitar Demo</a>
         </div>
     </header>
 
     <main>
         <!-- ============================================================
-           HERO SECTION (DARK)
+           FRANJA 1: HERO SECTION — PARALLAX + HIGH-CONVERSION
            ============================================================ -->
         <section id="inicio" class="section section-dark hero">
-            <!-- Floating Background Shapes -->
-            <div class="floating-shapes-container">
-                <div class="floating-shape shape-primary" style="top: -10%; left: -10%; animation-duration: 25s;"></div>
-                <div class="floating-shape shape-secondary"
-                    style="bottom: 10%; right: -5%; width: 200px; height: 200px; animation-duration: 18s; animation-delay: -5s;">
-                </div>
-                <div class="floating-shape shape-primary"
-                    style="bottom: -10%; left: 30%; width: 150px; height: 150px; opacity: 0.2; animation-duration: 30s;">
-                </div>
+            <!-- Parallax Background Shapes — each moves at different scroll speed via JS -->
+            <div class="floating-shapes-container" id="heroShapesContainer">
+                <div class="floating-shape shape-primary parallax-shape" id="heroShape1"
+                    style="top: -10%; left: -10%; animation-duration: 25s;"></div>
+                <div class="floating-shape shape-secondary parallax-shape" id="heroShape2"
+                    style="bottom: 10%; right: -5%; width: 240px; height: 240px; animation-duration: 18s; animation-delay: -5s;"></div>
+                <div class="floating-shape shape-primary parallax-shape" id="heroShape3"
+                    style="bottom: -10%; left: 30%; width: 180px; height: 180px; opacity: 0.25; animation-duration: 30s;"></div>
             </div>
 
             <div class="container hero-content">
-                <br><br>
-                <div class="hero-badge">
-                    <div class="badge-dot"></div>
-                    <span>Producción Estable v1.1</span>
+                <br>
+                <div class="hero-badge" style="background: rgba(99,102,241,0.15); border-color: rgba(99,102,241,0.3);">
+                    <div class="badge-dot" style="background: #10b981; box-shadow: 0 0 10px #10b981;"></div>
+                    <span>✨ Plataforma N° 1 en Gestión Inteligente de Cuidado Infantil</span>
                 </div>
 
-                <h1 class="hero-title">
-                    Transformando el Cuidado Infantil con <span class="gradient-text">Inteligencia
-                        Artificial</span>
+                <h1 class="hero-title" style="margin-top: 1.2rem; line-height: 1.15;">
+                    La Primera Fuerza Laboral Virtual de IA que
+                    <span class="gradient-text">Protege y Cuida</span> a Cada Niño
                 </h1>
 
-                <p class="hero-subtitle">
-                    Una fuerza laboral virtual de 360° para Centros de Desarrollo Infantil. Elimina la burocracia y
-                    enfócate en el bienestar de los niños.
+                <p class="hero-subtitle" style="font-size: 1.25rem; max-width: 780px; margin: 1.5rem auto 2.5rem auto; color: var(--text-white-90);">
+                    Elimina el 80% del papeleo manual en tu Centro de Cuidado Infantil. Automatiza la nutrición OMS, la asistencia y mantén a los padres tranquilos con alertas en tiempo real.
                 </p>
 
-                <div class="hero-cta-group">
-                    <a href="#contacto" class="btn-primary">
-                        Solicitar Demo
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
+                <div class="hero-cta-group" style="display: flex; gap: 1.25rem; justify-content: center; align-items: center;">
+                    <a href="#contacto" class="btn-primary" style="padding: 1rem 2.2rem; font-size: 1.1rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.6rem;">
+                        Comenzar Mi Transformación
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
                     </a>
-                    <a target="_blank "href="https://app.kindicoreai.sbs/" class="btn-glass">Ir a la Aplicación</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://app.kindicoreai.sbs/" class="btn-glass"
+                        style="padding: 1rem 2rem; font-size: 1.1rem; font-weight: 500;">
+                        🚀 Probar Demo Interactiva
+                    </a>
                 </div>
-                <br><br>
+
+                <!-- Micro-Social Proof Bar -->
+                <div style="margin-top: 3rem; display: flex; gap: 2rem; justify-content: center; align-items: center; flex-wrap: wrap; opacity: 0.85;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <span style="color: #f59e0b; font-size: 1.2rem;">★★★★★</span>
+                        <span><strong>4.9/5</strong> de valoración ejecutiva</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <span><strong>+100%</strong> trazabilidad nutricional</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span><strong>-5.5 horas/sem</strong> ahorradas por docente</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- Wave Bottom - Flipped for "Flow Down" effect -->
+            <!-- Wave Bottom Divider -->
             <div class="wave-divider bottom" style="transform: scaleY(-1); bottom: -2px;">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-                        class="shape-fill"></path>
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
                 </svg>
             </div>
-            <b><br><br><br>
         </section>
 
         <!-- ============================================================
-           VISION SECTION (LIGHT)
+           FRANJA 2: VISIÓN & TRANSFORMACIÓN (LIGHT)
            ============================================================ -->
         <section id="vision" class="section section-light">
             <div class="container">
                 <div class="section-header animate-on-scroll" style="text-align: center; margin-bottom: 4rem;">
-                    <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--dark-bg); margin-bottom: 1rem;">
-                        Visión <span class="gradient-text">Ejecutiva</span>
+                    <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--dark-bg); margin-bottom: 1rem;">
+                        De la Fricción Manual al <span class="gradient-text">Superpoder Digital</span>
                     </h2>
-                    <p style="color: var(--light-text-secondary); max-width: 600px; margin: 0 auto;">
-                        Nuestra misión es resolver la fragmentación operativa y la falta de datos
-                        en tiempo real que sufren las instituciones de cuidado infantil.
+                    <p style="color: var(--light-text-secondary); max-width: 680px; margin: 0 auto; font-size: 1.1rem;">
+                        Reemplaza carpetas físicas y hojas de cálculo dispersas por una plataforma unificada que anticipa problemas, protege a cada niño y libera horas valiosas para tu equipo.
                     </p>
                 </div>
 
                 <!-- Interactive Vision Timeline -->
                 <div class="vision-timeline">
-                    <!-- Center Line with Nodes -->
                     <div class="timeline-line">
                         <div class="timeline-node" data-index="0"></div>
                         <div class="timeline-node" data-index="1"></div>
@@ -174,105 +168,89 @@
                         <div class="timeline-node" data-index="3"></div>
                     </div>
 
-                    <!-- Cards Container -->
                     <div class="timeline-cards">
                         <!-- Left Card 1 -->
                         <div class="vision-timeline-card left animate-on-scroll" data-index="0">
                             <div class="icon-box secondary">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path
-                                        d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
-                                    <line x1="12" y1="9" x2="12" y2="13" />
-                                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                                    <line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" />
                                 </svg>
                             </div>
                             <h3>El Problema</h3>
-                            <p>Datos de salud, nutrición y asistencia dispersos en papeles y hojas de cálculo. Ceguera
-                                operativa.</p>
+                            <p>Datos de salud, nutrición y asistencia dispersos en papeles y hojas de cálculo. Ceguera operativa y riesgo de incumplimiento normativo.</p>
                         </div>
 
                         <!-- Right Card 1 -->
                         <div class="vision-timeline-card right animate-on-scroll delay-100" data-index="1">
                             <div class="icon-box primary">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <circle cx="12" cy="12" r="10" />
-                                    <path d="M9 12l2 2 4-4" />
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" /><path d="M9 12l2 2 4-4" />
                                 </svg>
                             </div>
                             <h3>La Solución</h3>
-                            <p>Ecosistema SaaS Multi-Tenant + IA Agéntica (LangGraph) para automatización total.</p>
+                            <p>Una plataforma unificada e inteligente que automatiza la gestión completa de tu centro. Todo en un solo lugar, desde el primer día.</p>
                         </div>
 
                         <!-- Left Card 2 -->
                         <div class="vision-timeline-card left animate-on-scroll delay-200" data-index="2">
                             <div class="icon-box primary">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                    <path d="M14 2v6h6" />
-                                    <line x1="16" y1="13" x2="8" y2="13" />
-                                    <line x1="16" y1="17" x2="8" y2="17" />
+                                    <path d="M14 2v6h6" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" />
                                 </svg>
                             </div>
                             <h3>Cero Papeles</h3>
-                            <p>Eliminación total de registros manuales. Todo digitalizado y accesible en tiempo real.
-                            </p>
+                            <p>Eliminación total de registros manuales. Fichas, reportes y minutas digitalizados, accesibles en segundos desde cualquier dispositivo.</p>
                         </div>
 
                         <!-- Right Card 2 -->
                         <div class="vision-timeline-card right animate-on-scroll delay-300" data-index="3">
                             <div class="icon-box secondary">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <circle cx="12" cy="12" r="10" />
-                                    <path d="M2 12h20" />
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                                 </svg>
                             </div>
-                            <h3>Visibilidad 360°</h3>
-                            <p>Control total para administradores. Dashboards en tiempo real para cada nivel.</p>
+                            <h3>Familias Tranquilas</h3>
+                            <p>Padres informados en tiempo real sobre nutrición, hitos de desarrollo y asistencia de su hijo. Mayor confianza, mayor retención.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-
             <!-- Wave Bottom Inverse -->
             <div class="wave-divider bottom">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-                        class="shape-fill-dark"></path>
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill-dark"></path>
                 </svg>
             </div>
-            <br><br><br><br>
         </section>
 
         <!-- ============================================================
-           FUNCTIONALITY SECTION (DARK)
+           FRANJA 3: 5 PILARES DE BIENESTAR INFANTIL (DARK INTERACTIVE)
            ============================================================ -->
         <section id="funcionalidad" class="section section-dark">
             <div class="floating-shapes-container">
-                <div class="floating-shape shape-primary"
-                    style="top: 20%; right: -5%; width: 500px; height: 500px; opacity: 0.1;"></div>
+                <div class="floating-shape shape-primary" style="top: 20%; right: -5%; width: 500px; height: 500px; opacity: 0.1;"></div>
             </div>
 
             <div class="container">
-                <div style="text-align: center; margin-bottom: 4rem;" class="animate-on-scroll">
-                    <h2 style="font-size: 2.5rem; font-weight: 700;">Objetivos Sociales y <span
-                            class="gradient-text">Funcionalidad</span></h2>
-                    <p style="color: var(--text-muted); max-width: 600px; margin: 1rem auto;">Gestión del Cuidado
-                        Infantil (Child-Centric Core): El sistema pone al niño en el centro de todas las operaciones.
+                <div style="text-align: center; margin-bottom: 3.5rem;" class="animate-on-scroll">
+                    <h2 style="font-size: 2.5rem; font-weight: 800;">
+                        5 Pilares de <span class="gradient-text">Bienestar Infantil</span>
+                    </h2>
+                    <p style="color: var(--text-muted); max-width: 650px; margin: 1rem auto; font-size: 1.1rem;">
+                        Cada área de tu centro conectada e inteligente. Explora los pilares de cuidado que KindiCore AI automatiza para ti.
                     </p>
                 </div>
 
                 <div class="services-layout">
-                    <!-- LEFT COLUMN: Title + Quote + Canvas -->
+                    <!-- LEFT COLUMN: Quote + Canvas -->
                     <div class="services-left animate-on-scroll">
-                        <h3 class="services-quote">"La tecnología no debe sentirse como trabajo extra. Debe sentirse
-                            como un <span style="color: var(--brand-secondary)">superpoder</span>."</h3>
+                        <h3 class="services-quote">"La tecnología no debe sentirse como trabajo extra. Debe sentirse como un <span style="color: var(--brand-secondary);">superpoder</span>."</h3>
 
                         <!-- Neural Network Canvas Container -->
                         <div class="neural-wrapper">
@@ -284,32 +262,27 @@
                         </div>
                     </div>
 
-                    <!-- Glass Cards Grid -->
+                    <!-- RIGHT COLUMN: Service Cards -->
                     <div class="services-cards">
-                        <div class="glass-card animate-on-scroll service-card" data-service="0">
-                            <h3 style="color: var(--brand-secondary);">Salud Preventiva</h3>
-                            <p style="color: var(--text-white-70); font-size: 0.95rem;">Monitoreo de curvas OMS, vacunas
-                                y alertas automáticas.</p>
+                        <div class="glass-card service-card animate-on-scroll" data-service="0">
+                            <h3 style="color: #6366f1;">Salud Preventiva</h3>
+                            <p style="color: var(--text-white-70); font-size: 0.95rem;">Monitoreo de curvas OMS, vacunas y alertas automáticas de riesgo de salud.</p>
                         </div>
-                        <div class="glass-card animate-on-scroll service-card" data-service="1">
-                            <h3 style="color: var(--brand-primary);">Nutrición Inteligente</h3>
-                            <p style="color: var(--text-white-70); font-size: 0.95rem;">Seguimiento de ingesta para
-                                detectar desnutrición.</p>
+                        <div class="glass-card service-card animate-on-scroll delay-100" data-service="1">
+                            <h3 style="color: #f43f5e;">Nutrición Inteligente</h3>
+                            <p style="color: var(--text-white-70); font-size: 0.95rem;">Seguimiento de ingesta diaria para detectar desnutrición y prevenir alergias.</p>
                         </div>
-                        <div class="glass-card animate-on-scroll service-card" data-service="2">
-                            <h3 style="color: var(--brand-secondary);">Desarrollo Integral</h3>
-                            <p style="color: var(--text-white-70); font-size: 0.95rem;">Tracking de hitos en
-                                dominios clave.</p>
+                        <div class="glass-card service-card animate-on-scroll delay-200" data-service="2">
+                            <h3 style="color: #10b981;">Desarrollo Integral</h3>
+                            <p style="color: var(--text-white-70); font-size: 0.95rem;">Tracking de hitos cognitivos, motores y sociales en dominios clave de la primera infancia.</p>
                         </div>
-                        <div class="glass-card animate-on-scroll service-card" data-service="3">
-                            <h3 style="color: var(--brand-primary);">Asistencia Segura</h3>
-                            <p style="color: var(--text-white-70); font-size: 0.95rem;">Control biométrico de ingresos y
-                                salidas.</p>
+                        <div class="glass-card service-card animate-on-scroll delay-300" data-service="3">
+                            <h3 style="color: #f59e0b;">Asistencia Segura</h3>
+                            <p style="color: var(--text-white-70); font-size: 0.95rem;">Control de ingresos y salidas de cada niño. Notificación automática a las familias.</p>
                         </div>
-                        <div class="glass-card animate-on-scroll service-card" data-service="4">
-                            <h3 style="color: var(--brand-secondary);">Familia Conectada</h3>
-                            <p style="color: var(--text-white-70); font-size: 0.95rem;">Reportes en tiempo real para los
-                                padres.</p>
+                        <div class="glass-card service-card animate-on-scroll delay-300" data-service="4">
+                            <h3 style="color: #8b5cf6;">Familia Conectada</h3>
+                            <p style="color: var(--text-white-70); font-size: 0.95rem;">Reportes en tiempo real vía WhatsApp y app. Padres tranquilos, centros confiables.</p>
                         </div>
                     </div>
                 </div>
@@ -317,101 +290,88 @@
 
             <!-- Wave Bottom -->
             <div class="wave-divider bottom">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-                        class="shape-fill"></path>
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
                 </svg>
             </div>
-            <br><br><br><br>
         </section>
 
         <!-- ============================================================
-           ARCHITECTURE & ROADMAP (LIGHT)
+           FRANJA 4: BENEFICIOS & MEDIDA DEL IMPACTO (LIGHT)
            ============================================================ -->
-        <section id="arquitectura" class="section section-light">
+        <section id="impacto" class="section section-light">
             <div class="container">
                 <div class="grid-2">
+                    <!-- Left Column: Customer Value Pillars -->
                     <div class="animate-on-scroll">
-                        <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--dark-bg); margin-bottom: 2rem;">
-                            Arquitectura <span class="gradient-text">Moderna</span></h2>
-                        <!-- Single Dashboard Card for Architecture Tech Stack (Decoupled Style) -->
+                        <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--dark-bg); margin-bottom: 2rem; text-align: center;">
+                            Tu Centro, Sin <span class="gradient-text">Límites</span>
+                        </h2>
                         <div class="architecture-dashboard-card">
-                            <!-- Item 1: Frontend -->
+                            <!-- Pilar 1: Acceso Multiplataforma -->
                             <div class="dashboard-item">
                                 <div class="dashboard-icon-wrapper">
                                     <svg viewBox="0 0 24 24" fill="none" class="impact-icon" stroke="currentColor">
-                                        <polygon points="12 2 2 7 12 12 22 7 12 2" stroke-width="2"
-                                            stroke-linejoin="round" />
-                                        <polyline points="2 17 12 22 22 17" stroke-width="2" stroke-linejoin="round" />
-                                        <polyline points="2 12 12 17 22 12" stroke-width="2" stroke-linejoin="round" />
+                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2" stroke-width="2" />
+                                        <line x1="12" y1="18" x2="12.01" y2="18" stroke-width="3" stroke-linecap="round" />
                                     </svg>
                                 </div>
                                 <div class="dashboard-content">
                                     <div class="dashboard-header">
-                                        <span class="impact-label">Frontend Moderno</span>
-                                        <span class="impact-tech-badge">Next.js 14</span>
+                                        <span class="impact-label">Acceso en Cualquier Lugar</span>
+                                        <span class="impact-tech-badge">Multiplataforma</span>
                                     </div>
-                                    <p style="font-size: 0.85rem; color: var(--light-text-secondary); margin: 0;">React
-                                        18 + TailwindCSS. Diseño Mobile-First.</p>
+                                    <p style="font-size: 0.85rem; color: var(--light-text-secondary); margin: 0;">Celular, tablet o computadora. Docentes y familias conectados sin instalaciones complejas.</p>
                                 </div>
                             </div>
 
                             <div class="dashboard-divider"></div>
 
-                            <!-- Item 2: Backend -->
+                            <!-- Pilar 2: Seguridad -->
                             <div class="dashboard-item">
                                 <div class="dashboard-icon-wrapper">
                                     <svg viewBox="0 0 24 24" fill="none" class="impact-icon" stroke="currentColor">
-                                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2" stroke-width="2" />
-                                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2" stroke-width="2" />
-                                        <line x1="6" y1="6" x2="6.01" y2="6" stroke-width="3" />
-                                        <line x1="6" y1="18" x2="6.01" y2="18" stroke-width="3" />
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke-width="2" />
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke-width="2" />
                                     </svg>
                                 </div>
                                 <div class="dashboard-content">
                                     <div class="dashboard-header">
-                                        <span class="impact-label">Backend Robusto</span>
-                                        <span class="impact-tech-badge">Python</span>
+                                        <span class="impact-label">Privacidad de Nivel Bancario</span>
+                                        <span class="impact-tech-badge">100% Seguro</span>
                                     </div>
-                                    <p style="font-size: 0.85rem; color: var(--light-text-secondary); margin: 0;">Flask
-                                        Blueprints + MySQL 8 + Pinecone DB.</p>
+                                    <p style="font-size: 0.85rem; color: var(--light-text-secondary); margin: 0;">Fichas médicas y datos familiares protegidos con cifrado avanzado y copias automáticas.</p>
                                 </div>
                             </div>
 
                             <div class="dashboard-divider"></div>
 
-                            <!-- Item 3: AI Core -->
+                            <!-- Pilar 3: IA Predictiva -->
                             <div class="dashboard-item">
                                 <div class="dashboard-icon-wrapper">
-                                    <!-- Brain/Circuit Icon -->
                                     <svg viewBox="0 0 24 24" fill="none" class="impact-icon" stroke="currentColor">
-                                        <path
-                                            d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-4A2.5 2.5 0 0 1 9.5 2z" />
-                                        <path
-                                            d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-4A2.5 2.5 0 0 0 14.5 2z" />
+                                        <circle cx="12" cy="12" r="3" stroke-width="2" />
+                                        <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" stroke-width="2" stroke-linecap="round" />
                                     </svg>
                                 </div>
                                 <div class="dashboard-content">
                                     <div class="dashboard-header">
-                                        <span class="impact-label">IA Core (Cerebro)</span>
-                                        <span class="impact-tech-badge">LangGraph</span>
+                                        <span class="impact-label">Asistente IA Predictivo</span>
+                                        <span class="impact-tech-badge">Alertas Automáticas</span>
                                     </div>
-                                    <p style="font-size: 0.85rem; color: var(--light-text-secondary); margin: 0;">
-                                        Multi-Agente System. GPT-4 + Gemini Hybrid.</p>
+                                    <p style="font-size: 0.85rem; color: var(--light-text-secondary); margin: 0;">Detecta riesgos nutricionales y de desarrollo antes de que sean un problema.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Right Column: Animated Impact Metrics -->
                     <div class="animate-on-scroll delay-200">
-                        <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--dark-bg); margin-bottom: 2rem;">
+                        <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--dark-bg); margin-bottom: 2rem; text-align: center;">
                             Innovación de <span class="gradient-text">Alto Impacto</span>
                         </h2>
-
-                        <!-- Single Dashboard Card for compactness -->
                         <div class="impact-dashboard-card">
-                            <!-- Item 1 -->
+                            <!-- Metric 1 -->
                             <div class="dashboard-item">
                                 <div class="dashboard-icon-wrapper">
                                     <svg viewBox="0 0 24 24" fill="none" class="impact-icon" stroke="currentColor">
@@ -422,10 +382,10 @@
                                 <div class="dashboard-content">
                                     <div class="dashboard-header">
                                         <span class="impact-label">Carga Administrativa</span>
-                                        <span class="impact-tech-badge">IA Agéntica</span>
+                                        <span class="impact-tech-badge">Automatizado</span>
                                     </div>
                                     <div class="dashboard-stat-row">
-                                        <span class="impact-stat" data-target="80">-0%</span>
+                                        <span class="impact-stat" data-target="80" data-prefix="-" data-suffix="%">-0%</span>
                                         <small class="impact-context">5.5h/semanal recuperados</small>
                                     </div>
                                 </div>
@@ -433,7 +393,7 @@
 
                             <div class="dashboard-divider"></div>
 
-                            <!-- Item 2 -->
+                            <!-- Metric 2 -->
                             <div class="dashboard-item">
                                 <div class="dashboard-icon-wrapper">
                                     <svg viewBox="0 0 24 24" fill="none" class="impact-icon" stroke="currentColor">
@@ -442,11 +402,11 @@
                                 </div>
                                 <div class="dashboard-content">
                                     <div class="dashboard-header">
-                                        <span class="impact-label">Operatividad</span>
-                                        <span class="impact-tech-badge">SaaS Cloud</span>
+                                        <span class="impact-label">Siempre Disponible</span>
+                                        <span class="impact-tech-badge">Alta Disponibilidad</span>
                                     </div>
                                     <div class="dashboard-stat-row">
-                                        <span class="impact-stat" data-target="24">0/7</span>
+                                        <span class="impact-stat" data-target="24" data-prefix="" data-suffix="/7">0/7</span>
                                         <small class="impact-context">Disponibilidad total</small>
                                     </div>
                                 </div>
@@ -454,7 +414,7 @@
 
                             <div class="dashboard-divider"></div>
 
-                            <!-- Item 3 -->
+                            <!-- Metric 3 -->
                             <div class="dashboard-item">
                                 <div class="dashboard-icon-wrapper">
                                     <svg viewBox="0 0 24 24" fill="none" class="impact-icon" stroke="currentColor">
@@ -464,11 +424,11 @@
                                 </div>
                                 <div class="dashboard-content">
                                     <div class="dashboard-header">
-                                        <span class="impact-label">Cumplimiento</span>
-                                        <span class="impact-tech-badge">Big Data</span>
+                                        <span class="impact-label">Cumplimiento MIES</span>
+                                        <span class="impact-tech-badge">Normativa OMS</span>
                                     </div>
                                     <div class="dashboard-stat-row">
-                                        <span class="impact-stat" data-target="100">0%</span>
+                                        <span class="impact-stat" data-target="100" data-prefix="" data-suffix="%">0%</span>
                                         <small class="impact-context">Trazabilidad Total</small>
                                     </div>
                                 </div>
@@ -477,62 +437,57 @@
                     </div>
                 </div>
             </div>
-            <!-- Wave Bottom Inverse (From Architecture to Contact) -->
+
+            <!-- Wave Bottom Inverse -->
             <div class="wave-divider bottom">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
-                    <path
-                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-                        class="shape-fill-dark"></path>
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill-dark"></path>
                 </svg>
             </div>
-            <br><br><br><br>
         </section>
 
         <!-- ============================================================
-           CONTACT SECTION (DARK)
+           FRANJA 5: CONTACTO & CONVERSIÓN (DARK)
            ============================================================ -->
         <section id="contacto" class="section section-dark" style="position: relative;">
-
-            <div class="container" style="padding-top: 4rem;">
-                <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem auto;" class="animate-on-scroll">
-                    <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 1rem;">
-                        Únete a la <span
-                            style="background: linear-gradient(to right, var(--brand-secondary), var(--brand-primary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Revolución</span>
+            <div class="container" style="padding-top: 2rem;">
+                <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem auto;" class="animate-on-scroll">
+                    <div class="hero-badge" style="display: inline-flex; margin-bottom: 1rem; background: rgba(244,63,94,0.15); border-color: rgba(244,63,94,0.3);">
+                        <span>🚀 Garantía de Implementación Plug &amp; Play en 24 Horas</span>
+                    </div>
+                    <h2 style="font-size: clamp(2.3rem, 5vw, 3.2rem); font-weight: 800; margin-bottom: 1rem;">
+                        ¿Listo para Transformar
+                        <span style="background: linear-gradient(to right, var(--brand-secondary), var(--brand-primary)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                            la Experiencia en tu Centro?
+                        </span>
                     </h2>
-                    <p style="font-size: 1.1rem; color: var(--text-muted);">
-                        Solicita acceso anticipado y transforma tu Centro de Cuidado Infantil.
+                    <p style="font-size: 1.15rem; color: var(--text-muted);">
+                        Solicita un análisis sin costo para tu institución. Recibe una demo personalizada y descubre cómo recuperar cientos de horas administrativas desde la primera semana.
                     </p>
                 </div>
-
 
                 <div class="glass-card animate-on-scroll contact-form-card">
                     <form id="contactForm">
                         <div class="form-grid">
                             <div class="form-group">
                                 <label>Nombre</label>
-                                <input type="text" name="nombre" class="form-input" placeholder="Tu nombre completo"
-                                    required>
+                                <input type="text" name="nombre" class="form-input" placeholder="Tu nombre completo" required>
                             </div>
                             <div class="form-group">
                                 <label>Teléfono</label>
-                                <input type="tel" name="telefono" class="form-input" placeholder="099 123 4567"
-                                    required>
+                                <input type="tel" name="telefono" class="form-input" placeholder="099 123 4567" required>
                             </div>
                             <div class="form-group">
                                 <label>Institución</label>
-                                <input type="text" name="institucion" class="form-input"
-                                    placeholder="Centro de Cuidado Infantil" required>
+                                <input type="text" name="institucion" class="form-input" placeholder="Centro de Cuidado Infantil" required>
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
                                 <input type="email" name="email" class="form-input" placeholder="tu@email.com" required>
                             </div>
                         </div>
-                        <button type="submit" class="btn-primary btn-full" style="margin-top: 1.5rem;">Enviar
-                            Solicitud</button>
-                        <div id="formMessage"
-                            style="margin-top: 1rem; text-align: center; font-size: 0.95rem; min-height: 1.5em;"></div>
+                        <button type="submit" class="btn-primary btn-full" style="margin-top: 1.5rem;">Enviar Solicitud</button>
+                        <div id="formMessage" style="margin-top: 1rem; text-align: center; font-size: 0.95rem; min-height: 1.5em;"></div>
                     </form>
                 </div>
             </div>
@@ -544,17 +499,17 @@
        ============================================================ -->
     <footer class="footer">
         <div class="container" style="text-align: center;">
-            <span style="font-size: 1.5rem; font-weight: 700; display: block; margin-bottom: 1rem;">KindiCore <span
-                    class="gradient-text">AI</span></span>
-            <p style="color: var(--text-muted); margin-bottom: 2rem;">Infraestructura digital inteligente para el
-                bienestar infantil.</p>
-            <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.8rem; margin-top: 1rem;">Desarrollado por: Jonnathan
-                Peña</p>
-            <p style="color: #94a3b8; font-size: 0.9rem;">© 2026 WEBLIFETECH.</p>
+            <span style="font-size: 1.5rem; font-weight: 700; display: block; margin-bottom: 1rem;">KindiCore <span class="gradient-text">AI</span></span>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">La plataforma de IA que cuida a quienes cuidan a tus hijos.</p>
+            <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                <a href="/terminos" style="color: var(--text-white-70);">Términos y Condiciones</a>
+                <a href="/privacidad" style="color: var(--text-white-70);">Políticas de Privacidad</a>
+            </div>
+            <p style="color: rgba(255,255,255,0.6); font-size: 0.8rem; margin-top: 1rem;">Desarrollado por: Jonnathan Peña</p>
+            <p style="color: #94a3b8; font-size: 0.9rem;">© 2026 WEBLIFETECH. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    </footer>
 </body>
 
 </html>

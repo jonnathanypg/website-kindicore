@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initMobileMenu();
     initSmoothScroll();
     initScrollAnimations();
+    initParallax();
 
     // Advanced Visuals
     initNeuralNetwork();
@@ -16,6 +17,48 @@ document.addEventListener('DOMContentLoaded', function () {
     initHybridImpact();
     initContactForm();
 });
+
+/* ============================================================
+   REAL SCROLL PARALLAX — Hero Background Shapes
+   ============================================================ */
+function initParallax() {
+    const shape1 = document.getElementById('heroShape1');
+    const shape2 = document.getElementById('heroShape2');
+    const shape3 = document.getElementById('heroShape3');
+
+    if (!shape1 && !shape2 && !shape3) return;
+
+    // Mark shapes for GPU compositing
+    [shape1, shape2, shape3].forEach(el => {
+        if (el) el.style.willChange = 'transform';
+    });
+
+    let ticking = false;
+
+    function onScroll() {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                const scrollY = window.scrollY;
+
+                // Each layer moves at a different fraction — creates depth illusion
+                if (shape1) {
+                    shape1.style.transform = `translate(${scrollY * 0.12}px, ${scrollY * 0.15}px) rotate(${scrollY * 0.02}deg)`;
+                }
+                if (shape2) {
+                    shape2.style.transform = `translate(${-scrollY * 0.10}px, ${scrollY * 0.30}px) rotate(${-scrollY * 0.015}deg)`;
+                }
+                if (shape3) {
+                    shape3.style.transform = `translate(${scrollY * 0.05}px, ${-scrollY * 0.08}px)`;
+                }
+
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+}
 
 
 /* ============================================================
@@ -719,33 +762,27 @@ function initVisionTimeline() {
 }
 
 /* ============================================================
-   HYBRID IMPACT ANIMATION
+   HYBRID IMPACT ANIMATION — Counter with custom prefix/suffix
    ============================================================ */
 function initHybridImpact() {
-    // Select ALL dashboard cards to ensure we find the one with stats
     const cards = document.querySelectorAll('.impact-dashboard-card');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Find stats WITHIN this intersecting card
                 const values = entry.target.querySelectorAll('.impact-stat');
 
                 values.forEach(value => {
                     const targetStr = value.getAttribute('data-target');
-                    if (!targetStr) return; // Skip if no target
+                    if (!targetStr) return;
                     const target = parseInt(targetStr);
+
+                    // Read prefix/suffix from HTML attributes
+                    const prefix = value.getAttribute('data-prefix') || '';
+                    const suffix = value.getAttribute('data-suffix') || '%';
+
                     let current = 0;
-
-                    // Determine format
-                    let suffix = "%";
-                    let prefix = "";
-
-                    // Custom formatting based on target value context
-                    if (target === 80) prefix = "-";
-                    if (target === 24) suffix = "/7";
-
-                    const duration = 1500; // 1.5 seconds
+                    const duration = 1500;
                     const steps = 50;
                     const stepTime = duration / steps;
                     const increment = target / steps;
@@ -756,20 +793,18 @@ function initHybridImpact() {
                             current = target;
                             clearInterval(timer);
                         }
-
-                        // Format specifically for the 24/7 case to avoid decimals
-                        let displayValue = Math.floor(current);
-                        value.textContent = `${prefix}${displayValue}${suffix}`;
+                        value.textContent = `${prefix}${Math.floor(current)}${suffix}`;
                     }, stepTime);
                 });
 
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.2 }); // Trigger sooner
+    }, { threshold: 0.2 });
 
     cards.forEach(card => observer.observe(card));
 }
+
 
 /* ============================================================
    CONTACT FORM HANDLER
