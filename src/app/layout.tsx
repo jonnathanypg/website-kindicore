@@ -4,9 +4,9 @@ import Footer from '@/components/Footer';
 import GlobalParticlesCanvas from '@/components/GlobalParticlesCanvas';
 
 export const metadata = {
-  title: 'KindiCore AI - Infraestructura Digital Inteligente',
+  title: 'KindiCore AI — Gestión Inteligente para Centros de Cuidado Infantil',
   description:
-    'KindiCore AI - Infraestructura digital inteligente para transformar Centros de Desarrollo Infantil. Gestión de salud, nutrición y asistencia con IA.',
+    'KindiCore AI: elimina el papeleo manual, automatiza la nutrición OMS, controla la asistencia y mantén a las familias tranquilas. La plataforma de IA N°1 para guarderías, CDI y CMCI en Ecuador y Latinoamérica.',
 };
 
 export default function RootLayout({

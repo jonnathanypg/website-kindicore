@@ -55,72 +55,68 @@ export default function ImpactDashboard() {
 
   return (
     <div className="grid-2" ref={containerRef}>
-      {/* Left Column: Tech Stack */}
+      {/* Left Column: Customer Benefits */}
       <div className="animate-on-scroll animated">
         <h2 style={{ fontSize: '2.2rem', fontWeight: 700, color: 'var(--dark-bg)', marginBottom: '2rem', textAlign: 'center' }}>
-          Arquitectura <span className="gradient-text">Moderna</span>
+          Tu Centro, <span className="gradient-text">Sin Límites</span>
         </h2>
         <div className="architecture-dashboard-card">
-          {/* Item 1: Frontend */}
+          {/* Item 1: Accessibility */}
           <div className="dashboard-item">
             <div className="dashboard-icon-wrapper">
               <svg viewBox="0 0 24 24" fill="none" className="impact-icon" stroke="currentColor">
-                <polygon points="12 2 2 7 12 12 22 7 12 2" strokeWidth="2" strokeLinejoin="round" />
-                <polyline points="2 17 12 22 22 17" strokeWidth="2" strokeLinejoin="round" />
-                <polyline points="2 12 12 17 22 12" strokeWidth="2" strokeLinejoin="round" />
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" strokeWidth="2" strokeLinejoin="round" />
               </svg>
             </div>
             <div className="dashboard-content">
               <div className="dashboard-header">
-                <span className="impact-label">Frontend Moderno</span>
-                <span className="impact-tech-badge">Next.js 14</span>
+                <span className="impact-label">Accesibilidad Total</span>
+                <span className="impact-tech-badge">Acceso 24/7</span>
               </div>
               <p style={{ fontSize: '0.85rem', color: 'var(--light-text-secondary)', margin: 0 }}>
-                React 18 + TailwindCSS. Diseño Mobile-First.
+                Diseño intuitivo compatible con cualquier dispositivo.
               </p>
             </div>
           </div>
 
           <div className="dashboard-divider" />
 
-          {/* Item 2: Backend */}
+          {/* Item 2: Data Security */}
           <div className="dashboard-item">
             <div className="dashboard-icon-wrapper">
               <svg viewBox="0 0 24 24" fill="none" className="impact-icon" stroke="currentColor">
-                <rect x="2" y="2" width="20" height="8" rx="2" ry="2" strokeWidth="2" />
-                <rect x="2" y="14" width="20" height="8" rx="2" ry="2" strokeWidth="2" />
-                <line x1="6" y1="6" x2="6.01" y2="6" strokeWidth="3" />
-                <line x1="6" y1="18" x2="6.01" y2="18" strokeWidth="3" />
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" strokeWidth="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" strokeWidth="2" />
               </svg>
             </div>
             <div className="dashboard-content">
               <div className="dashboard-header">
-                <span className="impact-label">Backend Robusto</span>
-                <span className="impact-tech-badge">Python / Node.js</span>
+                <span className="impact-label">Seguridad de Datos</span>
+                <span className="impact-tech-badge">Blindaje Pro</span>
               </div>
               <p style={{ fontSize: '0.85rem', color: 'var(--light-text-secondary)', margin: 0 }}>
-                Flask Blueprints + PostgreSQL + Pinecone DB.
+                Protocolos de encriptación de grado bancario.
               </p>
             </div>
           </div>
 
           <div className="dashboard-divider" />
 
-          {/* Item 3: AI Core */}
+          {/* Item 3: Ease of Use */}
           <div className="dashboard-item">
             <div className="dashboard-icon-wrapper">
               <svg viewBox="0 0 24 24" fill="none" className="impact-icon" stroke="currentColor">
-                <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-4A2.5 2.5 0 0 1 9.5 2z" />
-                <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-4A2.5 2.5 0 0 0 14.5 2z" />
+                <circle cx="12" cy="12" r="10" strokeWidth="2" />
+                <path d="M12 16v-4M12 8h.01" strokeWidth="2" />
               </svg>
             </div>
             <div className="dashboard-content">
               <div className="dashboard-header">
-                <span className="impact-label">IA Core (Cerebro)</span>
-                <span className="impact-tech-badge">LangGraph</span>
+                <span className="impact-label">Facilidad de Uso</span>
+                <span className="impact-tech-badge">Sin Curva Aprendizaje</span>
               </div>
               <p style={{ fontSize: '0.85rem', color: 'var(--light-text-secondary)', margin: 0 }}>
-                Multi-Agent System. GPT-4o + Gemini Hybrid.
+                Interfaz optimizada para máxima productividad.
               </p>
             </div>
           </div>
@@ -144,7 +140,7 @@ export default function ImpactDashboard() {
             <div className="dashboard-content">
               <div className="dashboard-header">
                 <span className="impact-label">Carga Administrativa</span>
-                <span className="impact-tech-badge">IA Agéntica</span>
+                <span className="impact-tech-badge">Automatizado</span>
               </div>
               <div className="dashboard-stat-row">
                 <span className="impact-stat">-{stat1}%</span>
@@ -165,7 +161,7 @@ export default function ImpactDashboard() {
             <div className="dashboard-content">
               <div className="dashboard-header">
                 <span className="impact-label">Operatividad</span>
-                <span className="impact-tech-badge">SaaS Cloud</span>
+                <span className="impact-tech-badge">Alta Disponibilidad</span>
               </div>
               <div className="dashboard-stat-row">
                 <span className="impact-stat">{stat2}/7</span>
@@ -187,7 +183,7 @@ export default function ImpactDashboard() {
             <div className="dashboard-content">
               <div className="dashboard-header">
                 <span className="impact-label">Cumplimiento</span>
-                <span className="impact-tech-badge">Big Data</span>
+                <span className="impact-tech-badge">Estandarizado</span>
               </div>
               <div className="dashboard-stat-row">
                 <span className="impact-stat">{stat3}%</span>

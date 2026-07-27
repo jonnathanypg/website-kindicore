@@ -67,13 +67,10 @@ export default function Navbar() {
             Visión
           </a>
           <a href="#funcionalidad" className="nav-link">
-            Funcionalidad
+            Pilares
           </a>
-          <a href="#arquitectura" className="nav-link">
-            Tecnología
-          </a>
-          <a href="#arquitectura" className="nav-link">
-            Impacto
+          <a href="#impacto" className="nav-link">
+            Beneficios
           </a>
           <a href="#contacto" className="nav-cta">
             Solicitar Demo
@@ -97,13 +94,10 @@ export default function Navbar() {
           Visión
         </a>
         <a href="#funcionalidad" className="mobile-link" onClick={closeMobileMenu}>
-          Funcionalidad
+          Pilares
         </a>
-        <a href="#arquitectura" className="mobile-link" onClick={closeMobileMenu}>
-          Tecnología
-        </a>
-        <a href="#arquitectura" className="mobile-link" onClick={closeMobileMenu}>
-          Impacto
+        <a href="#impacto" className="mobile-link" onClick={closeMobileMenu}>
+          Beneficios
         </a>
         <a href="#contacto" className="nav-cta" onClick={closeMobileMenu}>
           Solicitar Demo

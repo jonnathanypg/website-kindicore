@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 const timelineItems = [
   {
     title: 'El Problema',
-    description: 'Datos de salud, nutrición y asistencia dispersos en papeles y hojas de cálculo. Ceguera operativa.',
+    description: 'Datos de salud, nutrición y asistencia dispersos en papeles y hojas de cálculo. Ceguera operativa y riesgo de incumplimiento normativo.',
     type: 'secondary',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -18,7 +18,7 @@ const timelineItems = [
   },
   {
     title: 'La Solución',
-    description: 'Ecosistema SaaS Multi-Tenant + IA Agéntica (LangGraph) para automatización total.',
+    description: 'Una plataforma unificada e inteligente que automatiza la gestión completa de tu centro. Todo en un solo lugar, desde el primer día.',
     type: 'primary',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -30,7 +30,7 @@ const timelineItems = [
   },
   {
     title: 'Cero Papeles',
-    description: 'Eliminación total de registros manuales. Todo digitalizado y accesible en tiempo real.',
+    description: 'Eliminación total de registros manuales. Fichas, reportes y minutas digitalizados, accesibles en segundos desde cualquier dispositivo.',
     type: 'primary',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -43,13 +43,15 @@ const timelineItems = [
     align: 'left',
   },
   {
-    title: 'Visibilidad 360°',
-    description: 'Control total para administradores. Dashboards en tiempo real para cada nivel.',
+    title: 'Familias Tranquilas',
+    description: 'Padres informados en tiempo real sobre nutrición, hitos de desarrollo y asistencia de su hijo. Mayor confianza, mayor retención.',
     type: 'secondary',
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M2 12h20" />
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
     align: 'right',

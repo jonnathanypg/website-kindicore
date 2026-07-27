@@ -288,6 +288,13 @@ ol {
     animation: float-organic 20s infinite ease-in-out alternate;
 }
 
+/* GPU-accelerated parallax layer — JS overrides transform on scroll */
+.parallax-shape {
+    will-change: transform;
+    animation: float-organic 20s infinite ease-in-out alternate;
+    transition: none !important;
+}
+
 .shape-primary {
     background: var(--brand-primary);
     width: 400px;
@@ -987,7 +994,7 @@ ol {
     box-shadow: 0 15px 45px rgba(99, 102, 241, 0.15);
 }
 
-section#arquitectura h2 {
+section#impacto h2 {
     text-align: center;
 }
 
